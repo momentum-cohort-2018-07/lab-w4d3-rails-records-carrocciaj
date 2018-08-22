@@ -1,0 +1,22 @@
+<h1>New Album</h1>
+<%= form_with scope: :album, url: albums_path, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :artist_name %><br>
+    <%= form.text_field :artist_name %>
+  </p>
+
+  <p>
+    <%= form.label :year_released %><br>
+    <%= form.text_field :year_released %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+<%= link_to 'Cancel', albums_path %>
